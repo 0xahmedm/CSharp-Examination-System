@@ -10,12 +10,12 @@ namespace ExamApp
             // ---------------------------
             // 1 Create Subject
             // ---------------------------
-            Subject math = new Subject("Mathematics", "MATH101");
+            Subject Programming = new Subject("Programming", "PROG101");
 
             // ---------------------------
             // 2️ Create QuestionList
             // ---------------------------
-            QuestionList qList = new QuestionList("math_questions.txt");
+            QuestionList qList = new QuestionList("programming_questions.txt");
 
             // ---------------------------
             // 3️ Add Questions
@@ -50,14 +50,14 @@ namespace ExamApp
             // 4️ Run Practice Exam
             // ---------------------------
             Console.WriteLine("=== Practice Exam ===\n");
-            PracticeExam practice = new PracticeExam(30, qList, math);
+            PracticeExam practice = new PracticeExam(30, qList, Programming);
             practice.ShowExam();
 
             // ---------------------------
             // 5️ Run Final Exam
             // ---------------------------
             Console.WriteLine("\n=== Final Exam ===\n");
-            FinalExam final = new FinalExam(60, qList, math);
+            FinalExam final = new FinalExam(60, qList, Programming);
             final.ShowExam();
 
             Console.WriteLine("\nExams Completed!");
